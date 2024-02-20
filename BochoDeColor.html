@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocho de color</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        .opciones{
+            background-color: rgb(184, 164, 138);
+            width: 500px;
+            margin: 0 auto;
+        }
+        .color-opcion{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="cambiar-bocho" src="bocho_rojo.jpg" alt="">
+        <div class="opciones">
+            <label>
+                <input type="radio" name="color" style="background-color: red;" onchange="cambiarColorA('rojo')" />
+                Rojo
+            </label>
+            <label>
+                <input type="radio" name="color" style="background-color: blue;" onchange="cambiarColorA('azul')" />
+                Azul
+            </label>
+            <label>
+                <input type="radio" name="color" style="background-color: yellow;" onchange="cambiarColorA('amarillo')" />
+                Amarillo
+            </label>
+            <label>
+                <input type="radio" name="color" style="background-color: white;" onchange="cambiarColorA('blanco')" />
+                Blanco
+            </label>
+        </div>
+        
+        
+    </div>
+    <script>
+        function cambiarColorA(color){
+            document.getElementById("cambiar-bocho").src =
+            "bocho_"+color+".jpg"
+        }
+    </script>
+</body>
+</html>
