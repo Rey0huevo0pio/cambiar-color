@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foco men</title>
+    <style>
+        body{
+            background: black;
+        }
+        .container{
+            text-align: center;
+        }
+        .opciones{
+            text-align: center;
+            background-color: rgb(156, 5, 8);
+            width: 300px;
+            height: 60px;
+            margin: 0 auto;
+        }
+        .color-opcion{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        #cambiar-focos{
+            width: 50vh;
+            height: 60vh;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="cambiar-focos" src="foco_a.jpg" src="foco_p.jpg">
+        <div class="opciones">
+            <label>
+                <button onclick="toggleLuz()" witch="15px">Encender/Apagar luz</button>
+            </label>
+            
+        </div>
+        
+        
+    </div>
+    <script>
+        var luzEncendida = false;
+
+        function toggleLuz() {
+            luzEncendida = !luzEncendida;
+            if (luzEncendida) {
+                document.getElementById("cambiar-focos").src = "foco_a.jpg";
+               
+            } else {
+                document.getElementById("cambiar-focos").src = "foco_p.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
