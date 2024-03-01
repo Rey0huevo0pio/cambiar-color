@@ -37,7 +37,7 @@
         <img id="cambiar-focos" src="foco_a.jpg" src="foco_p.jpg">
         <div class="opciones">
             <label>
-                <button onclick="toggleLuz()" witch="15px">Encender/Apagar luz</button>
+                <button id="botonluz" onclick="toggleLuz()" witch="15px">Precione</button>
             </label>
             
         </div>
@@ -49,11 +49,13 @@
 
         function toggleLuz() {
             luzEncendida = !luzEncendida;
+            var boton= document.getElementById("botonluz");
             if (luzEncendida) {
                 document.getElementById("cambiar-focos").src = "foco_a.jpg";
-               
+            boton.innerText="apagado";
             } else {
                 document.getElementById("cambiar-focos").src = "foco_p.jpg";
+                boton.innerText="encendido";
             }
         }
     </script>
