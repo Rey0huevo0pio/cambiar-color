@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocho de color</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        .opciones{
+            background-color: rgb(184, 164, 138);
+            width: 500px;
+            margin: 0 auto;
+        }
+        .color-opcion{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .container img{
+            width: 50vh;
+            height: 70vh;
+        }
+
+    </style>
+</head><div class="container">
+        
+
+    <img id="person" src="/java_escrip/mis_perso/my_like/person_3.jpg">
+    <div class="opciones">
+        <div class="color-opcion"  style="background-color: aqua; background-image: url(/java_escrip/mis_perso/my_like/person_1.jpg); background-repeat: no-repeat; position: relative; background-size: 100%;" 
+        onclick="cambiarImagen('person_1','DESCRIPCION DE LOS PERSON:\n NOMBRE:Controlando un Juego para Convertirme en el Rey de otro Mundo \n Lu Wu, que llevaba tres años dirigiendo un pequeño sitio web de juegos, estába al borde de la quiebra, conocio a una excéntrica loli que afirmaba que su antepasado fue traicionado y perseguido en el Otro Mundo y necesitaba que él vaya allí para vengar a su antepasado. ¿Podrá Lu Wu empezar de cero, lograr su objetivo de venganza y convertirse en el nuevo gobernante del inframundo?')">
+        </div>
+        <div class="color-opcion" style="background-color: white;background-image: url(/java_escrip/mis_perso/my_like/person_2.jpg); background-repeat: no-repeat; position: relative; background-size: 100%;"  
+        onclick="cambiarImagen('person_2','DESCRIPCION DE LOS PERSON:El Gran Villano que Busca la Muerte\n \n A la edad de 18 años, Nie Xiaotian, un estudiante de secundaria especializado en artes marciales y educación física, Sufrió una fractura en la pierna izquierda mientras rescataba a una niña que cruzaba la calle. A partir de entonces se despidió de su carrera deportiva pero obtuvo el “Sistema Xueba”. Para aprobar con éxito el examen de ingreso a la universidad, ingresó al espacio virtual del sistema para estudiar materias académicas. Cien años después, cuando quiso regresar al mundo real, el sistema le informó que la única forma de irse era que alguien lo matara. Así, emprendió un largo y arduo camino en busca de la muerte.')">
+    </div>
+        <div class="color-opcion" style="background-color: blue;background-image: url(/java_escrip/mis_perso/my_like/person_3.jpg); background-repeat: no-repeat; position: relative; background-size: 100%;" 
+        onclick="cambiarImagen('person_3', 'DESCRIPCION DE LOS PERSON:\n LORD VILLANO \N Cruzado a un jefe lord villano en el juego de su vida anterior Pensó que podría revertir su destino de ser expulsado, pero el sistema apareció el día de la clasificación, obligando que Xiwei siga siendo un villano, y desde entonces, Xiwei ha sido un villano feliz. Robando recursos, robando territorios, golpeando a los jugadores, así como robando ocasionalmente las medias de las doncellas, y arrebatando a la doncella sagrada favorita de los jugadores')"
+        ></div>
+        <div class="color-opcion" style="background-color: yellow; background-image: url(/java_escrip/mis_perso/my_like/person_4.jpg); background-repeat: no-repeat; position: relative; background-size: 100%;" 
+        onclick="cambiarImagen('person_4', 'DESCRIPCION DE LOS PERSON:\N Mi secta es la más fuerte con 100 millones de puntos \n El manhua sigue la historia de Wang Feng, un dibujante de cómics que muere debido al exceso de trabajo. Sin embargo, en su muerte, se transmigra a un mundo de cultivo. Allí, obtiene un sistema de sectas poderoso que le permite invocar aliados extremadamente poderosos. Además, este sistema le recompensa con puntos de secta por sus logros. Wang Feng se embarca en una emocionante aventura para liderar su propia Secta Inmortal y alcanzar la gloria, mientras lucha contra adversarios en este mundo de cultivo intrigante. ​')"></div>
+    
+    </div>
+    
+    <div class="descripcion" id="descripcion-jugador">NOTA:
+        ESTO SOLO SON HISTORIA DE MANWAS QUE ME GUSTARON EN SI NO ES DE PERSONAJE SI NO DE LA HISTORIA 
+        QUE TIENE EL MANWA QUE ES MUY PARESIDO A HISTORIETA Y MANGAS</div>
+
+
+</div>
+<script>
+    function cambiarImagen(perso, descripcion) {
+        var rutaImagen = obtenerRutaImagen(perso);
+        document.getElementById("person").src = rutaImagen;
+        document.getElementById("descripcion-jugador").innerText = descripcion;
+    }
+
+    function obtenerRutaImagen(perso) {
+      
+        var rutaBase = "/java_escrip/mis_perso/my_like/";
+
+        var extension = ".jpg";
+
+       
+        var rutaImagen = rutaBase + perso+ extension;
+
+        return rutaImagen;
+
+        
+    }
+
+</script>
+</body>
+</html>e
