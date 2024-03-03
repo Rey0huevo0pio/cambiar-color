@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS3/LOTERIA.css">
+    <title>LOTERIA PRACTICA</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="letra">
+            <center>
+                <h2>CARTAs ALETORIA</h2>
+            </center>
+            <style>
+                body{
+                    background-color: bisque;
+                }
+                 body:focus {
+                    outline: none;
+                    text-align: center;
+                    display: flex;
+                    margin: 0%;
+                    padding: 0%;
+                    
+                }
+
+                img:focus {
+                    outline: none;
+                    pointer-events: none;
+                    user-select: none;
+                }
+
+                .contenedor {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+
+                .opciones {
+                    width: 35%;
+                    text-align: center;
+                    margin-right: 20px;
+                }
+
+                .opciones img {
+                    width: 50vh;
+                    height: 50vh;
+                    margin: 3%;
+                    padding: 1%;
+                }
+
+                #listaImagenes {
+                    padding: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                #listaImagenes option {
+                    margin: 5px;
+                }
+
+                #listaImagenes img {
+                    width: 60px;
+                    height: 60px;
+                    cursor: pointer;
+                }
+                /* Aquí va tu CSS */
+            </style>
+        </div>
+
+        <div class="opciones">
+            <img id="LoteriaPrac" src="ilovepdf_pages-to-jpg/loteria mexicana cartas pdf_page-001.jpg">
+        </div>
+
+        <div class="listaImagenesContenedor">
+            <select id="listaImagenes" onchange="cambiarImagenLoteria(this.value)">
+                <!-- Lista desordenada de imágenes -->
+            </select>
+        </div>
+    </div>
+
+    <script>
+        var imagenes = [];
+        for (var i = 1; i <= 54; i++) {
+            imagenes.push('loteria mexicana cartas pdf_page-00' + i);
+        }
+
+        // Agregar imágenes a la lista desordenada
+        var lista = document.getElementById('listaImagenes');
+        imagenes.forEach(function (imagen) {
+            var listItem = document.createElement('option');
+            listItem.value = imagen;
+            listItem.text = imagen;
+            lista.appendChild(listItem);
+        });
+
+        function cambiarImagenLoteria(imagen) {
+            var rutaImagen = obtenerRutaImagen(imagen);
+            document.getElementById("LoteriaPrac").src = rutaImagen;
+        }
+
+        function obtenerRutaImagen(nombreImagen) {
+            var rutaBase = "ilovepdf_pages-to-jpg/";
+            var extension = ".jpg";
+            return rutaBase + nombreImagen + extension;
+        }
+    </script>
+
+</body>
+
+</html>
